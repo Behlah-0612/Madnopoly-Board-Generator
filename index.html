@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MADNOPOLY — Kamloops Real Estate Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@500;700;900&family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"></style>
+    </head>
+<body>
+    <div id="app">
+        <header id="header">
+            <div id="logo">MADNOPOLY</div>
+            <div id="controls">
+                <div id="seedDisplay">PATH: <span id="pathSeed">—</span> | TILES: <span id="tileSeed">—</span></div>
+                <button id="generateBtn" class="btn">New Board</button>
+                <button id="reshuffleBtn" class="btn">Reshuffle</button>
+            </div>
+        </header>
+        
+        <!-- PROPERTY CARD -->
+        <div id="propertyCard">
+            <div id="cardHeader">
+                <div id="cardColorStrip"></div>
+                <div id="cardImage">🏛</div>
+                <button id="closeCard">×</button>
+            </div>
+            <div id="cardBody">
+                <h2 id="cardTitle">Property Name</h2>
+                <div id="cardType">PROPERTY DEED</div>
+                <p id="cardDescription">Click any property to view complete ownership details.</p>
+                <div class="cardSection">
+                    <h3>Rent Schedule</h3>
+                    <div id="rentDetails"></div>
+                </div>
+                <div class="cardSection">
+                    <h3>Property Info</h3>
+                    <div id="propertyInfo"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOARD -->
+        <div id="boardWrapper">
+            <div id="boardContainer">
+                <div id="boardBase"></div>
+                <div id="board3d"></div>
+            </div>
+        </div>
+
+        <!-- LEGEND -->
+        <button id="legendToggle">Legend</button>
+        <aside id="legend">
+            <h3>Property Groups</h3>
+            <div class="legend-item"><div class="legend-color" style="background: linear-gradient(135deg, #FFD700, #FFA500);"></div>Corner Squares</div>
+            <div class="legend-item"><div class="legend-color" style="background: #8B4513;"></div>Brown</div>
+            <div class="legend-item"><div class="legend-color" style="background: #87CEEB;"></div>Light Blue</div>
+            <div class="legend-item"><div class="legend-color" style="background: #FF69B4;"></div>Pink</div>
+            <div class="legend-item"><div class="legend-color" style="background: #FFA500;"></div>Orange</div>
+            <div class="legend-item"><div class="legend-color" style="background: #DC143C;"></div>Red</div>
+            <div class="legend-item"><div class="legend-color" style="background: #FFD700;"></div>Yellow</div>
+            <div class="legend-item"><div class="legend-color" style="background: #228B22;"></div>Green</div>
+            <div class="legend-item"><div class="legend-color" style="background: #1E90FF;"></div>Dark Blue</div>
+            <div class="legend-item"><div class="legend-color" style="background: #2C2C2C;"></div>Transit Hubs</div>
+            <div class="legend-item"><div class="legend-color" style="background: #FFE4B5;"></div>Utilities</div>
+            <div class="legend-item"><div class="legend-color" style="background: #8B2332;"></div>Taxes</div>
+        </aside>
+
+        <!-- LOADING -->
+        <div id="loading">
+            <div class="spinner"></div>
+            <div id="loadingText">Building Empire...</div>
+            <div id="progressBar"><div id="progressFill"></div></div>
+        </div>
+
+        <!-- SHORTCUTS -->
+        <div id="shortcuts">
+            <h4>⌨️ Shortcuts</h4>
+            <div><kbd>N</kbd> New Board</div>
+            <div><kbd>T</kbd> Reshuffle</div>
+            <div><kbd>L</kbd> Legend</div>
+            <div><kbd>R</kbd> Reset View</div>
+            <div><kbd>ESC</kbd> Close Card</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
